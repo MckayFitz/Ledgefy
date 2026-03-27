@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_outline"
+    android:padding="8dp"
+    tools:context=".TransactionActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/btn_settings"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="Settings"
+            android:scaleType="centerInside"
+            android:src="@drawable/settings_3110"
+            android:tint="@color/primaryBlue"
+            tools:ignore="UseAppTint,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transaction"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/secondaryGreen"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp" />
+
+        <View
+            android:id="@+id/title_underline"
+            android:layout_width="200dp"
+            android:layout_height="6dp"
+            android:layout_below="@id/tv_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:background="@color/primaryBlue" />
+
+        <LinearLayout
+            android:id="@+id/input_fields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_underline"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingHorizontal="24dp">
+
+            <EditText
+                android:id="@+id/edit_amount"
+                android:layout_width="398dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="sans-serif-black"
+                android:hint="Amount $"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:textColor="@color/primaryBlue"
+                android:textColorHint="@color/primaryBlue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_date"
+                android:layout_width="396dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="sans-serif-black"
+                android:hint="Date"
+                android:inputType="date"
+                android:textAlignment="center"
+                android:textColor="@color/primaryBlue"
+                android:textColorHint="@color/primaryBlue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_description"
+                android:layout_width="401dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="sans-serif-black"
+                android:hint="Description"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:textColor="@color/primaryBlue"
+                android:textColorHint="@color/primaryBlue"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Subtract Button on the Far Left Center -->
+            <ImageButton
+                android:id="@+id/btn_subtract"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/subtract_icon_png_28152"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                tools:ignore="UseAppTint"
+                android:tint="@android:color/holo_red_dark"
+                android:contentDescription="Subtract Transaction" />
+
+            <!-- Add Button on the Far Right Center -->
+            <ImageButton
+                android:id="@+id/btn_plus"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/plus_icon_13062"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:tint="@color/secondaryGreen"
+                tools:ignore="UseAppTint"
+                android:contentDescription="Add Transaction" />
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/bottom_nav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="26dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="24dp">
+
+            <ImageButton
+                android:id="@+id/btn_calendar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/calendar_small_232x256"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:contentDescription="Calendar"
+                android:tint="@color/primaryBlue"
+                tools:ignore="UseAppTint" />
+
+            <ImageButton
+                android:id="@+id/btn_home"
+                android:layout_width="53dp"
+                android:layout_height="53dp"
+                android:src="@drawable/home_button"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="60dp"
+                android:contentDescription="Home"
+                android:tint="@color/primaryBlue"
+                tools:ignore="UseAppTint" />
+
+            <ImageButton
+                android:id="@+id/btn_add_nav"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/plus_icon_13079"
+                android:background="@android:color/transparent"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:contentDescription="Add Transaction"
+                android:tint="@color/primaryBlue"
+                tools:ignore="UseAppTint" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/settings_fragment_container"
+        android:name="com.example.ledgefy.fragments.SettingsFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true" />
+</FrameLayout>
